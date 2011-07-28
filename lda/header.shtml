@@ -1,0 +1,38 @@
+<style type="text/css">
+.headerLink
+{
+    color: #999999;
+    font-weight: bold;
+    font-family: "Times New Roman", serif;
+    font-size: 80%;
+}
+
+.header
+{
+    background-color: #330000;
+}
+</style>
+<tr>
+    <td align="left" valign="top">
+        <div align="center"><img src="/images/name.png" width="450" height="60"></div>
+    </td>
+</tr>
+
+<tr>
+    <td class='header' align="left" valign="top">
+        <div align="center">
+            <a class='headerLink' href="/lda/index.shtml">HOME</a> |
+            <a class='headerLink' href="/lda/zara.shtml">LADY ZARA</a> |
+            <a class='headerLink' href="/lda/Nicole.shtml">LADY NICOLE</a> |
+            <a class='headerLink' href="/lda/facilities.shtml">MY FACILITIES</a> |
+            <a class='headerLink' href="/lda/specialities.shtml">SPECIALITIES</a> |
+            <a class='headerLink' href="/lda/images.shtml">IMAGES</a> |
+            <a class='headerLink' href="/lda/hos.shtml">HALL OF SHAME</a> |
+            <a class='headerLink' href="/lda/musings.shtml">SLAVE MUSINGS</a> |
+            <a class='headerLink' href="/lda/wishlist.shtml">WISHLIST</a> |
+            <a class='headerLink' href="/lda/contact.shtml">CONTACT</a> |
+            <a class='headerLink' href="/lda/links.shtml">LINKS</a> |
+            <a class='headerLink' href="http://groups.yahoo.com/group/lucifersdarkangel/">YAHOO! GROUP</a>
+        </div>
+    </td>
+</tr>

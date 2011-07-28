@@ -14,19 +14,7 @@ BODY {margin: 0}
   <tr> 
     <td width="150" height="900" align="left" valign="top"><!-- #BeginEditable "imgleft" --><img src="/images/14l.jpg" width="150" height="900"><!-- #EndEditable --></td><td height="900" align="left" valign="top"> 
       <table width="100%" border="0" cellspacing="0" cellpadding="3">
-        <tr> 
-          <td align="left" valign="top"> 
-            <div align="center"><img src="/images/name.png" width="450" height="60"></div></td></tr>
-        <tr> 
-          <td align="left" valign="top" bgcolor="#330000"> 
-            <div align="center"><font color="#330000"><b><font color="#999999" face="Times New Roman, Times, serif" size="2"><a href="/lda/index.shtml">HOME</a> 
-              | <a href="/lda/zara.shtml">LADY ZARA</a> | <a href="/lda/Nicole.shtml">LADY NICOLE</a> | <a href="/lda/facilities.shtml">MY 
-              FACILITIES</a> | <a href="/lda/specialities.shtml">SPECIALITIES</a> 
-              | <a href="/lda/images.shtml">IMAGES</a> | <a href="/lda/hos.shtml">HALL 
-              OF SHAME</a> | <a href="/lda/musings.shtml">SLAVE MUSINGS</a> | 
-              <a href="/lda/wishlist.shtml">WISHLIST</a> | <a href="/lda/contact.shtml">CONTACT</a> 
-              | <a href="/lda/links.shtml">LINKS</a> | <a href="http://groups.yahoo.com/group/lucifersdarkangel/">YAHOO! 
-              GROUP</a></font></b></font></div></td></tr>
+        <!--#include virtual="header.shtml" -->
         <tr> 
           <td> 
             <div align="center"><font face="Times New Roman, Times, serif" size="2"><!-- #BeginEditable "body" --><font face="Times New Roman, Times, serif" size="4" color="#CC0000"><b><br>
