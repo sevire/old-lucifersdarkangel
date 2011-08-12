@@ -1,7 +1,7 @@
 <style type="text/css">
 .headerLink
 {
-    color: #999999;
+    color: #FFFFFF;
     font-weight: bold;
     font-family: "Times New Roman", serif;
     font-size: 80%;
@@ -24,6 +24,7 @@
             <a class='headerLink' href="/lda/index.shtml">HOME</a> |
             <a class='headerLink' href="/lda/zara.shtml">LADY ZARA</a> |
             <a class='headerLink' href="/lda/Nicole.shtml">LADY NICOLE</a> |
+            <a class='headerLink' href="/lda/Huntress.shtml">THE HUNTRESS</a> |
             <a class='headerLink' href="/lda/facilities.shtml">MY FACILITIES</a> |
             <a class='headerLink' href="/lda/specialities.shtml">SPECIALITIES</a> |
             <a class='headerLink' href="/lda/images.shtml">IMAGES</a> |
