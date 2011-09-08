@@ -45,6 +45,21 @@
                 <br></font></font></font>
 
                 <table border="0" cellspacing="0" cellpadding="3">
+
+                  <tr align="center" valign="middle">
+                    <td width="140" height="130"><font face="Verdana, Arial, Helvetica, sans-serif" size="2"><a href='/images/chamber/b01.jpg'><img src='/images/chamber/TN_b01.jpg' width='130' height='109'></a></font></td>
+                    <td width="140" height="130"><font face="Verdana, Arial, Helvetica, sans-serif" size="2"><a href='/images/chamber/b02.jpg'><img src='/images/chamber/TN_b02.jpg' width='130' height='97'></a></font></td>
+                    <td width="140" height="130"><font face="Verdana, Arial, Helvetica, sans-serif" size="2"><a href='/images/chamber/b03.jpg'><img src='/images/chamber/TN_b03.jpg' width='130' height='97'></a></font></td>
+                    <td width="140" height="130"><font face="Verdana, Arial, Helvetica, sans-serif" size="2"><a href='/images/chamber/b04.jpg'><img src='/images/chamber/TN_b04.jpg' width='85' height='130'></a></font></td>
+                  </tr>
+
+                  <tr align="center" valign="middle">
+                    <td width="140" height="130"><font face="Verdana, Arial, Helvetica, sans-serif" size="2"><a href='/images/chamber/b05.jpg'><img src='/images/chamber/TN_b05.jpg' width='130' height='97'></a></font></td>
+                    <td width="140" height="130"><font face="Verdana, Arial, Helvetica, sans-serif" size="2"><a href='/images/chamber/b06.jpg'><img src='/images/chamber/TN_b06.jpg' width='97' height='130'></a></font></td>
+                    <td width="140" height="130"><font face="Verdana, Arial, Helvetica, sans-serif" size="2"><a href='/images/chamber/b07.jpg'><img src='/images/chamber/TN_b07.jpg' width='98' height='130'></a></font></td>
+                    <td width="140" height="140"><a href="/images/chamber/14.jpg"><img src="/images/chamber/TN_14.JPG" width="130" height="98" border="0"></a></td>
+                  </tr>
+
                   <tr align="center" valign="middle">
                     <td width="140" height="130"><a href='/images/chamber/a15.jpg'><font face="Verdana, Arial, Helvetica, sans-serif" size="2"><img src='/images/chamber/TN_a15.jpg' width='130' height='98'></font></a></td>
 
@@ -136,7 +151,7 @@
 
                     <td width="140" height="140"><a href="/images/chamber/13.jpg"><img src="/images/chamber/TN_13.JPG" width="130" height="98" border="0"></a></td>
 
-                    <td width="140" height="140"><a href="/images/chamber/14.jpg"><img src="/images/chamber/TN_14.JPG" width="130" height="98" border="0"></a></td>
+                    <td width="140" height="140">&nbsp;</td>
 
                     <td width="140" height="140">&nbsp;</td>
                   </tr>
