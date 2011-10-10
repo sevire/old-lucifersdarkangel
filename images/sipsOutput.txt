@@ -1,0 +1,264 @@
+/Users/thomassecondary/Sites/lucifersdarkangel(trunk)/images/01l.jpg
+  pixelWidth: 150
+  pixelHeight: 900
+/Users/thomassecondary/Sites/lucifersdarkangel(trunk)/images/01r.jpg
+  pixelWidth: 150
+  pixelHeight: 900
+/Users/thomassecondary/Sites/lucifersdarkangel(trunk)/images/02l.jpg
+  pixelWidth: 150
+  pixelHeight: 900
+/Users/thomassecondary/Sites/lucifersdarkangel(trunk)/images/02r.jpg
+  pixelWidth: 150
+  pixelHeight: 900
+/Users/thomassecondary/Sites/lucifersdarkangel(trunk)/images/03l.jpg
+  pixelWidth: 150
+  pixelHeight: 900
+/Users/thomassecondary/Sites/lucifersdarkangel(trunk)/images/03r.jpg
+  pixelWidth: 150
+  pixelHeight: 900
+/Users/thomassecondary/Sites/lucifersdarkangel(trunk)/images/04l.jpg
+  pixelWidth: 150
+  pixelHeight: 900
+/Users/thomassecondary/Sites/lucifersdarkangel(trunk)/images/04r.jpg
+  pixelWidth: 150
+  pixelHeight: 900
+/Users/thomassecondary/Sites/lucifersdarkangel(trunk)/images/05l.jpg
+  pixelWidth: 150
+  pixelHeight: 900
+/Users/thomassecondary/Sites/lucifersdarkangel(trunk)/images/05r.jpg
+  pixelWidth: 150
+  pixelHeight: 900
+/Users/thomassecondary/Sites/lucifersdarkangel(trunk)/images/06l.jpg
+  pixelWidth: 150
+  pixelHeight: 900
+/Users/thomassecondary/Sites/lucifersdarkangel(trunk)/images/06r.jpg
+  pixelWidth: 150
+  pixelHeight: 900
+/Users/thomassecondary/Sites/lucifersdarkangel(trunk)/images/07l.jpg
+  pixelWidth: 150
+  pixelHeight: 900
+/Users/thomassecondary/Sites/lucifersdarkangel(trunk)/images/07r.jpg
+  pixelWidth: 150
+  pixelHeight: 900
+/Users/thomassecondary/Sites/lucifersdarkangel(trunk)/images/08l.jpg
+  pixelWidth: 150
+  pixelHeight: 900
+/Users/thomassecondary/Sites/lucifersdarkangel(trunk)/images/08r.jpg
+  pixelWidth: 150
+  pixelHeight: 900
+/Users/thomassecondary/Sites/lucifersdarkangel(trunk)/images/09l.jpg
+  pixelWidth: 150
+  pixelHeight: 900
+/Users/thomassecondary/Sites/lucifersdarkangel(trunk)/images/09r.jpg
+  pixelWidth: 150
+  pixelHeight: 900
+/Users/thomassecondary/Sites/lucifersdarkangel(trunk)/images/10l.jpg
+  pixelWidth: 150
+  pixelHeight: 900
+/Users/thomassecondary/Sites/lucifersdarkangel(trunk)/images/10r.jpg
+  pixelWidth: 150
+  pixelHeight: 900
+/Users/thomassecondary/Sites/lucifersdarkangel(trunk)/images/11l.jpg
+  pixelWidth: 150
+  pixelHeight: 900
+/Users/thomassecondary/Sites/lucifersdarkangel(trunk)/images/12l.jpg
+  pixelWidth: 150
+  pixelHeight: 900
+/Users/thomassecondary/Sites/lucifersdarkangel(trunk)/images/13l.jpg
+  pixelWidth: 150
+  pixelHeight: 900
+/Users/thomassecondary/Sites/lucifersdarkangel(trunk)/images/14l.jpg
+  pixelWidth: 150
+  pixelHeight: 900
+/Users/thomassecondary/Sites/lucifersdarkangel(trunk)/images/15l.jpg
+  pixelWidth: 150
+  pixelHeight: 900
+/Users/thomassecondary/Sites/lucifersdarkangel(trunk)/images/16l.jpg
+  pixelWidth: 150
+  pixelHeight: 900
+/Users/thomassecondary/Sites/lucifersdarkangel(trunk)/images/17l.jpg
+  pixelWidth: 150
+  pixelHeight: 900
+/Users/thomassecondary/Sites/lucifersdarkangel(trunk)/images/18l.jpg
+  pixelWidth: 150
+  pixelHeight: 900
+/Users/thomassecondary/Sites/lucifersdarkangel(trunk)/images/19l.jpg
+  pixelWidth: 150
+  pixelHeight: 900
+/Users/thomassecondary/Sites/lucifersdarkangel(trunk)/images/4-small-LDA.jpg
+  pixelWidth: 254
+  pixelHeight: 302
+/Users/thomassecondary/Sites/lucifersdarkangel(trunk)/images/banner-celeste.jpg
+  pixelWidth: 468
+  pixelHeight: 60
+/Users/thomassecondary/Sites/lucifersdarkangel(trunk)/images/banner-femdomcats.jpg
+  pixelWidth: 468
+  pixelHeight: 60
+/Users/thomassecondary/Sites/lucifersdarkangel(trunk)/images/banner-missviola.jpg
+  pixelWidth: 468
+  pixelHeight: 60
+/Users/thomassecondary/Sites/lucifersdarkangel(trunk)/images/banner-mistressrealm.jpg
+  pixelWidth: 468
+  pixelHeight: 60
+/Users/thomassecondary/Sites/lucifersdarkangel(trunk)/images/banner-morganna.jpg
+  pixelWidth: 468
+  pixelHeight: 60
+/Users/thomassecondary/Sites/lucifersdarkangel(trunk)/images/banner-oad.jpg
+  pixelWidth: 468
+  pixelHeight: 60
+/Users/thomassecondary/Sites/lucifersdarkangel(trunk)/images/banner-sabrina.jpg
+  pixelWidth: 468
+  pixelHeight: 60
+/Users/thomassecondary/Sites/lucifersdarkangel(trunk)/images/banner-serious.jpg
+  pixelWidth: 468
+  pixelHeight: 60
+/Users/thomassecondary/Sites/lucifersdarkangel(trunk)/images/banner-servetheladies.jpg
+  pixelWidth: 468
+  pixelHeight: 60
+/Users/thomassecondary/Sites/lucifersdarkangel(trunk)/images/banner.jpg
+  pixelWidth: 468
+  pixelHeight: 60
+/Users/thomassecondary/Sites/lucifersdarkangel(trunk)/images/caric.jpg
+  pixelWidth: 500
+  pixelHeight: 600
+/Users/thomassecondary/Sites/lucifersdarkangel(trunk)/images/fdcthumb.jpg
+  pixelWidth: 100
+  pixelHeight: 150
+/Users/thomassecondary/Sites/lucifersdarkangel(trunk)/images/gal01.jpg
+  pixelWidth: 600
+  pixelHeight: 450
+/Users/thomassecondary/Sites/lucifersdarkangel(trunk)/images/gal02.jpg
+  pixelWidth: 600
+  pixelHeight: 450
+/Users/thomassecondary/Sites/lucifersdarkangel(trunk)/images/gal03.jpg
+  pixelWidth: 600
+  pixelHeight: 450
+/Users/thomassecondary/Sites/lucifersdarkangel(trunk)/images/gal04.jpg
+  pixelWidth: 600
+  pixelHeight: 450
+/Users/thomassecondary/Sites/lucifersdarkangel(trunk)/images/gal05.jpg
+  pixelWidth: 600
+  pixelHeight: 450
+/Users/thomassecondary/Sites/lucifersdarkangel(trunk)/images/gal06.jpg
+  pixelWidth: 600
+  pixelHeight: 450
+/Users/thomassecondary/Sites/lucifersdarkangel(trunk)/images/gal07.jpg
+  pixelWidth: 600
+  pixelHeight: 450
+/Users/thomassecondary/Sites/lucifersdarkangel(trunk)/images/gal08.jpg
+  pixelWidth: 600
+  pixelHeight: 450
+/Users/thomassecondary/Sites/lucifersdarkangel(trunk)/images/gal09.jpg
+  pixelWidth: 600
+  pixelHeight: 450
+/Users/thomassecondary/Sites/lucifersdarkangel(trunk)/images/gal10.jpg
+  pixelWidth: 600
+  pixelHeight: 450
+/Users/thomassecondary/Sites/lucifersdarkangel(trunk)/images/gal11.jpg
+  pixelWidth: 600
+  pixelHeight: 450
+/Users/thomassecondary/Sites/lucifersdarkangel(trunk)/images/gal12.jpg
+  pixelWidth: 600
+  pixelHeight: 450
+/Users/thomassecondary/Sites/lucifersdarkangel(trunk)/images/gal13.jpg
+  pixelWidth: 600
+  pixelHeight: 450
+/Users/thomassecondary/Sites/lucifersdarkangel(trunk)/images/gal14.jpg
+  pixelWidth: 600
+  pixelHeight: 450
+/Users/thomassecondary/Sites/lucifersdarkangel(trunk)/images/gal15.jpg
+  pixelWidth: 600
+  pixelHeight: 450
+/Users/thomassecondary/Sites/lucifersdarkangel(trunk)/images/gal16.jpg
+  pixelWidth: 600
+  pixelHeight: 450
+/Users/thomassecondary/Sites/lucifersdarkangel(trunk)/images/gal17.jpg
+  pixelWidth: 600
+  pixelHeight: 450
+/Users/thomassecondary/Sites/lucifersdarkangel(trunk)/images/gal18.jpg
+  pixelWidth: 600
+  pixelHeight: 450
+/Users/thomassecondary/Sites/lucifersdarkangel(trunk)/images/gal19.jpg
+  pixelWidth: 600
+  pixelHeight: 450
+/Users/thomassecondary/Sites/lucifersdarkangel(trunk)/images/gal20.jpg
+  pixelWidth: 600
+  pixelHeight: 450
+/Users/thomassecondary/Sites/lucifersdarkangel(trunk)/images/gal21.jpg
+  pixelWidth: 600
+  pixelHeight: 450
+/Users/thomassecondary/Sites/lucifersdarkangel(trunk)/images/gal22.jpg
+  pixelWidth: 600
+  pixelHeight: 450
+/Users/thomassecondary/Sites/lucifersdarkangel(trunk)/images/gal23.jpg
+  pixelWidth: 600
+  pixelHeight: 450
+/Users/thomassecondary/Sites/lucifersdarkangel(trunk)/images/gal24.jpg
+  pixelWidth: 600
+  pixelHeight: 450
+/Users/thomassecondary/Sites/lucifersdarkangel(trunk)/images/gal25.jpg
+  pixelWidth: 452
+  pixelHeight: 600
+/Users/thomassecondary/Sites/lucifersdarkangel(trunk)/images/gal26.jpg
+  pixelWidth: 452
+  pixelHeight: 600
+/Users/thomassecondary/Sites/lucifersdarkangel(trunk)/images/gal27.jpg
+  pixelWidth: 452
+  pixelHeight: 600
+/Users/thomassecondary/Sites/lucifersdarkangel(trunk)/images/gal28.jpg
+  pixelWidth: 600
+  pixelHeight: 452
+/Users/thomassecondary/Sites/lucifersdarkangel(trunk)/images/gal29.jpg
+  pixelWidth: 450
+  pixelHeight: 600
+/Users/thomassecondary/Sites/lucifersdarkangel(trunk)/images/gal30.jpg
+  pixelWidth: 452
+  pixelHeight: 600
+/Users/thomassecondary/Sites/lucifersdarkangel(trunk)/images/gal31.jpg
+  pixelWidth: 450
+  pixelHeight: 600
+/Users/thomassecondary/Sites/lucifersdarkangel(trunk)/images/gal32.jpg
+  pixelWidth: 450
+  pixelHeight: 600
+/Users/thomassecondary/Sites/lucifersdarkangel(trunk)/images/gal33.jpg
+  pixelWidth: 450
+  pixelHeight: 600
+/Users/thomassecondary/Sites/lucifersdarkangel(trunk)/images/gal34.jpg
+  pixelWidth: 450
+  pixelHeight: 600
+/Users/thomassecondary/Sites/lucifersdarkangel(trunk)/images/gal35.jpg
+  pixelWidth: 600
+  pixelHeight: 450
+/Users/thomassecondary/Sites/lucifersdarkangel(trunk)/images/gal36.jpg
+  pixelWidth: 450
+  pixelHeight: 600
+/Users/thomassecondary/Sites/lucifersdarkangel(trunk)/images/hos001.jpg
+  pixelWidth: 600
+  pixelHeight: 450
+/Users/thomassecondary/Sites/lucifersdarkangel(trunk)/images/hos002.jpg
+  pixelWidth: 600
+  pixelHeight: 450
+/Users/thomassecondary/Sites/lucifersdarkangel(trunk)/images/slave01.jpg
+  pixelWidth: 800
+  pixelHeight: 600
+/Users/thomassecondary/Sites/lucifersdarkangel(trunk)/images/slave02.jpg
+  pixelWidth: 600
+  pixelHeight: 800
+/Users/thomassecondary/Sites/lucifersdarkangel(trunk)/images/slave03.jpg
+  pixelWidth: 600
+  pixelHeight: 800
+/Users/thomassecondary/Sites/lucifersdarkangel(trunk)/images/slave04.jpg
+  pixelWidth: 600
+  pixelHeight: 800
+/Users/thomassecondary/Sites/lucifersdarkangel(trunk)/images/slave05.jpg
+  pixelWidth: 600
+  pixelHeight: 800
+/Users/thomassecondary/Sites/lucifersdarkangel(trunk)/images/slave06.jpg
+  pixelWidth: 600
+  pixelHeight: 800
+/Users/thomassecondary/Sites/lucifersdarkangel(trunk)/images/slave07.jpg
+  pixelWidth: 600
+  pixelHeight: 800
+/Users/thomassecondary/Sites/lucifersdarkangel(trunk)/images/splash.jpg
+  pixelWidth: 700
+  pixelHeight: 400
