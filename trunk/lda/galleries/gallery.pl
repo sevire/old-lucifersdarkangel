@@ -2,58 +2,14 @@
 use strict;
 use warnings;
 use feature ':5.10';
+use HTML::Template;
+
+# Template Handling
+my $template = HTML::Template->new(filename => 'gallery_template.html');
 
 # Formatting parameters
 my $table_column_width = 4;
 my $max_dimension = 130;
-
-# Start of html page
-my $preamble = <<END;
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
-
-<html>
-<head>
-    <meta name="generator" content="HTML Tidy for Mac OS X (vers 11 August 2008), see www.w3.org"><!-- #BeginEditable "doctitle" -->
-    
-    <title>Lucifer's Dark Angel</title><!-- #EndEditable -->
-    <meta http-equiv="Content-Type" content="text/html; charset=us-ascii">
-    <style type="text/css">
-        body {
-            margin: 0;
-        }
-        
-        table.gallery {
-            margin-left: auto;
-            margin-right: auto;
-        }
-        
-        table.gallery td {
-            height: 150px;
-            width: 150px;
-            background: red;
-        }
-        
-        table.gallery td a {
-            margin-left: auto;
-            margin-right : auto;
-            display: block;
-        }
-        
-        table.gallery td a img {
-            display: block;
-        }
-    </style>
-  
-</head>
-
-<body bgcolor="#000000" text="#FFFFFF" link="#FFFFFF" vlink="#FFFFFF" alink="#FFFFFF">
-
-END
-
-my $postamble = <<END;
-</body>
-</html>
-END
 
 # Tags used to construct HTML - table related
 my $tag_table_left = "<table class='gallery'>";
@@ -99,12 +55,12 @@ if (defined $ARGV[0]) {
 
 # Get list of image files with width and height.  This will probably only work on Mac or Unix/Linux platform
 # Replace with standard Perl library in future.
-my $sips_command = "sips -g pixelWidth -g pixelHeight *.jpg";
+my $sips_command = "sips -g pixelWidth -g pixelHeight *.jpg *.JPG";
 my $image_data = `$sips_command`;
 
 # Open file to write HTML snippet to
 open my $handle, '<', \$image_data;
-open my $write, '>', "gallery.html";
+my $write=""; # String used to create output data
 
 # Process output from sips command.  For every thumbnail, create the html line but check whether main image file
 # exists first.  Output list of files where there is a thumbnail but the main file doesn't exist.
@@ -123,7 +79,6 @@ while (defined ($line = <$handle>)) {
             # This is a thumbnail - check whether main file exists and skip if not.
             if (!-e $1) {
                 $process_flag = 0;
-                say "No file ($1) for thumbnail $thumbnail_name";
             } else {
                 $process_flag = 1;
                 $image_name = $1;
@@ -158,26 +113,27 @@ while (defined ($line = <$handle>)) {
             $tag_image = "<img " . " src='$image_path/$thumbnail_name' $size_string" . " />";
             $html_line = $tag_td_left . "<a " . $href . ">" . $tag_image . $tag_anchor_right . $tag_td_right;
             if ($output_lines == 0) {
-                print $write $preamble;
-                print $write $tag_table_left . "\n"
+                $write .= $tag_table_left . "\n";
             }
             if ($output_lines % $table_column_width == 0) {
                 if ($output_lines != 0) {
-                    print $write $tag_tr_right . "\n";
+                    $write .= $tag_tr_right . "\n";
                 }
-                print $write $tag_tr_left . "\n";
+                $write .= $tag_tr_left . "\n";
             }
-            print $write $html_line . "\n";
+            $write .= $html_line . "\n";
             $output_lines++;
         }
     } else {
         say "Unrecognised line $line, ignoring";
     }
 }
-print $write ($tag_td_left . $tag_td_right . "\n") x ($table_column_width - ($output_lines % $table_column_width));
-print $write $tag_tr_right;
-print $write $tag_table_right;
-print $write $postamble;
-close $write;
+$write .= ($tag_td_left . $tag_td_right . "\n") x ($table_column_width - ($output_lines % $table_column_width));
+$write .= $tag_tr_right;
+$write .= $tag_table_right;
+open my $file, '>', "gallery.shtml";
+$template->param('MAIN_CONTENT' => $write);
+print $file $template->output;
+close $file;
 
 
