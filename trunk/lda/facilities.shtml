@@ -47,7 +47,7 @@
                 <table border="0" cellspacing="0" cellpadding="3">
 
                   <tr align="center" valign="middle">
-                    <td width="140" height="130"><font face="Verdana, Arial, Helvetica, sans-serif" size="2"><a href='/images/chamber/b01.jpg'><img src='/images/chamber/TN_b01.jpg' width='130' height='109'></a></font></td>
+                    <td width="140" height="130"><a href="/images/chamber/09.jpg"><img src="/images/chamber/TN_09.JPG" width="130" height="98" border="0"></a></td>
                     <td width="140" height="130"><font face="Verdana, Arial, Helvetica, sans-serif" size="2"><a href='/images/chamber/b02.jpg'><img src='/images/chamber/TN_b02.jpg' width='130' height='97'></a></font></td>
                     <td width="140" height="130"><font face="Verdana, Arial, Helvetica, sans-serif" size="2"><a href='/images/chamber/b03.jpg'><img src='/images/chamber/TN_b03.jpg' width='130' height='97'></a></font></td>
                     <td width="140" height="130"><font face="Verdana, Arial, Helvetica, sans-serif" size="2"><a href='/images/chamber/b04.jpg'><img src='/images/chamber/TN_b04.jpg' width='85' height='130'></a></font></td>
@@ -137,7 +137,7 @@
                   </tr>
 
                   <tr align="center" valign="middle">
-                    <td width="140" height="140"><a href="/images/chamber/09.jpg"><img src="/images/chamber/TN_09.JPG" width="130" height="98" border="0"></a></td>
+                    <td width="140" height="140"><font face="Verdana, Arial, Helvetica, sans-serif" size="2"><a href='/images/chamber/b01.jpg'><img src='/images/chamber/TN_b01.jpg' width='130' height='109'></a></font></td>
 
                     <td width="140" height="140"><a href="/images/chamber/10.jpg"><img src="/images/chamber/TN_10.JPG" width="130" height="98" border="0"></a></td>
 
