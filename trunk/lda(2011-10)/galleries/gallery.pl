@@ -78,19 +78,19 @@ sub create_table_of_images {
     $html = "";
     $output_lines = 0;
     foreach $image_data (@$image_array) {
-        my ($name, $height, $width) = @$image_data;
+        my ($name, $width, $height) = @$image_data;
         
         say "Current name is $name";
         
-        $thumbnail_path = $image_path . "/thumbnails/" . $name;
+        $thumbnail_path = $image_path . "/thumbnails/" . "TN_" . $name;
         if ($height >= $width) {
             $size_string = "height='" . $max_dimension . "'";
         } else {
             $size_string = "width='" . $max_dimension . "'";
         }
 
-        $tag_image = "<img " . " src='$image_path/$name' $size_string" . " />";
-        $html_line = "<td>" . "<a " . "href='$thumbnail_path'" . ">" . $tag_image . "</a>" . "</td>";
+        $tag_image = "<img " . " src='$thumbnail_path' $size_string" . " />";
+        $html_line = "<td>" . "<a " . "href='$image_path/$name'" . ">" . $tag_image . "</a>" . "</td>";
         say "Current line is : $html_line";
         
         if ($output_lines == 0) {
@@ -111,22 +111,35 @@ sub create_table_of_images {
     $html;
 }
 
-# Formatting parameters
-my $table_column_width = 4;
-my $max_dimension = 130;
-my $image_path = "gallery-01";
+sub create_gallery_page {
+    my($table_column_width, $max_dimension, $image_path) = @_;
+    
+    # Process image files in 
+    my @images = get_image_data($image_path);
+    
+    # Create gallery table
+    my $page = create_table_of_images(\@images, 130, $image_path, 4, $image_path);
+    
+    # Make up page from gallery and template
+    open my $file, '>', "gallery.shtml";
+    my $template = HTML::Template->new(filename => 'gallery_template.html');
+    $template->param('MAIN_CONTENT' => $page);
+    print $file $template->output;
+    close $file;
+}
 
-# Process image files in 
-my @images = get_image_data($image_path);
+sub get_subdir_list {
+    my @dir_list;
+    my $dir;
+    
+    opendir(DIR, ".");
+    @dir_list= readdir(DIR);
+    foreach $dir (@dir_list) {
+        say "Dir : $dir";
+    }
+}
 
-# Create gallery table
-my $page = create_table_of_images(\@images, 130, $image_path, 4, $image_path);
-
-# Make up page from gallery and template
-open my $file, '>', "gallery.shtml";
-my $template = HTML::Template->new(filename => 'gallery_template.html');
-$template->param('MAIN_CONTENT' => $page);
-print $file $template->output;
-close $file;
+get_subdir_list;
+create_gallery_page(4, 130, "gallery-01");
 
 

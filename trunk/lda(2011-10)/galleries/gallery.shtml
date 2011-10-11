@@ -37,7 +37,7 @@
 <!--#include virtual="header.shtml" -->
 <table class='gallery'
 <tr>
-<td><a href='gallery-01/thumbnails/01.jpg'><img  src='gallery-01/01.jpg' height='130' /></a></td>
+<td><a href='gallery-01/01.jpg'><img  src='gallery-01/thumbnails/TN_01.jpg' width='130' /></a></td>
 <td></td>
 <td></td>
 <td></td>
