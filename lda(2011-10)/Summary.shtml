@@ -1,0 +1,40 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+
+<html>
+<head>
+    <meta name="generator" content="HTML Tidy for Mac OS X (vers 11 August 2008), see www.w3.org">
+    <meta http-equiv="Content-Type" content="text/html; charset=us-ascii">
+    <title>Lucifer's Dark Angel</title>
+    <style type="text/css">
+        body {
+            margin: 0;
+        }
+        
+        table.gallery {
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        table.gallery td {
+            height: 150px;
+            width: 150px;
+            background: red;
+        }
+        
+        table.gallery td a {
+            margin-left: auto;
+            margin-right : auto;
+            display: block;
+        }
+    
+        table.gallery td a img {
+            display: block;
+        }
+    </style>
+</head>
+
+<body>
+<!--#include virtual="header.shtml" -->
+This is a test
+</body>
+</html>
