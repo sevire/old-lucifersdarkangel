@@ -6,6 +6,7 @@ use strict;
 use warnings;
 use feature ':5.10';
 use Data::Dumper;
+use HTML::Template;
 
 my %config = WebGenConfig::get_config_data;
 my @text_file_list; # Stores file listing to avoid having to re-execute for each page
@@ -39,14 +40,16 @@ sub get_text_file_list {
         
         while (scalar(@list) > 0) {
             my $file = shift(@list);
-            printf("Checking <%s>\n", $file);
-            if (!(-d $file) && $file =~ $config{text_file_pattern}) {
+            my $fullpath = $dir_path . $config{ds} . $file;
+            printf("Checking <%s>\n", $fullpath);
+            if (!(-d $fullpath) && $file =~ $config{text_file_pattern}) {
                 printf("Is valid file, adding to list\n");
                 push(@text_file_list, $file);
             }
         }
+        printf("Num files is <%d>, list of files follows...\n", scalar(@text_file_list));
+        say Dumper(@text_file_list);
     }
-    say "Num files is: " . scalar(@text_file_list);
     return @text_file_list;
 }
 
@@ -63,7 +66,52 @@ sub get_textfile_for_page {
 }
 
 sub generate_page {
+    my $page_name = shift;
     
+    if (!WebGenHelper::page_exists($page_name)) {
+        die sprintf("Page <%s> does not exist\n", $page_name);
+    } else {
+        if (WebGenHelper::is_gallery($page_name)) {
+            say sprintf("<%s> is a gallery\n", $page_name);
+
+            # Creating a gallery so need to generate thumbnails / gallery HTML
+            generate_thumbnails($page_name);
+            
+        } else {
+            say sprintf("<%s> is a text page\n", $page_name);
+        }
+
+        # Make up page from text content and template
+        
+        my $template_name = $config{root} . $config{ds} . $config{template_folder} .
+            $config{ds} . $config{text_template_filename};
+        my $text_file_name = $config{root} . $config{ds} . $config{content_rel_path} . $config{ds} . $config{text_file_rel_path} .
+            $config{ds} . WebGenHelper::get_textfile_for_page($page_name);
+        my $target_fullpath = $config{target_root} . $config{ds} . $page_name . ".shtml";
+        
+        # Read in contents of text file
+        
+        my $handle;
+        my $holdTerminator = $/;
+        my $page_text;
+
+        undef $/; # Removes line separator so all text read in one 'slurp'
+        
+        open($handle, $text_file_name) or die sprintf("Couldn't read text file <%s> for page <%s>", $text_file_name, $page_name);
+        $page_text = <$handle>;
+        $/ = $holdTerminator;
+        print $page_text;
+        print "\n";
+        
+        # Pass template and text into Template to create complete page
+        
+        printf("Writing page <%s> to file <%s>\n", $page_name, $target_fullpath);
+        open my $file, '>', $target_fullpath;
+        my $template = HTML::Template->new(filename => $template_name);
+        $template->param('MAIN_CONTENT' => $page_text);
+        print $file $template->output;
+        close $file;
+    }
 }
 
 sub generate_gallery {
