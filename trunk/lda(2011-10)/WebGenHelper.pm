@@ -109,6 +109,8 @@ sub generate_page {
         open my $file, '>', $target_fullpath;
         my $template = HTML::Template->new(filename => $template_name);
         $template->param('MAIN_CONTENT' => $page_text);
+        printf("Generated Page contents...\n\n\n");
+        say($template->output);
         print $file $template->output;
         close $file;
     }
