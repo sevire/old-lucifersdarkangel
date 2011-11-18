@@ -37,12 +37,13 @@ use WebGenConfig;
 use WebGenHelper;
 #use WebGenHelper;
 
-our $root;
-our $page_name;
-our $debug = 1;
+my $root;
+my $page_name;
+my $debug = 1;
 my %config;
 
 sub process_command_line {
+    my $success = 0;
     GetOptions('rootpath=s' => \$root);
 
     if (!(defined $root)) {
@@ -54,6 +55,7 @@ sub process_command_line {
         printf "Page name not specified\n";
     } elsif ($debug) {
         printf("Page name is : <%s>\n", $page_name);
+        $success = 1;
     }
     
     do 'WebGenConfig.pl';
@@ -64,13 +66,15 @@ sub process_command_line {
         printf("Rootpath is  : <%s>\n", $root);
     }
     
-    say Dumper(%config);
+    # say Dumper(%config);
+    return $success;
 }
 
 sub main {
     WebGenHelper::generate_page($page_name);
 }
-process_command_line;
-main;
+if (process_command_line) {
+    main;
+}
 
 
