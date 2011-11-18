@@ -5,36 +5,21 @@
     <meta name="generator" content="HTML Tidy for Mac OS X (vers 11 August 2008), see www.w3.org">
     <meta http-equiv="Content-Type" content="text/html; charset=us-ascii">
     <title>Lucifer's Dark Angel</title>
-    <style type="text/css">
-        body {
-            margin: 0;
-        }
-        
-        table.gallery {
-            margin-left: auto;
-            margin-right: auto;
-        }
-        
-        table.gallery td {
-            height: 150px;
-            width: 150px;
-            background: red;
-        }
-        
-        table.gallery td a {
-            margin-left: auto;
-            margin-right : auto;
-            display: block;
-        }
-    
-        table.gallery td a img {
-            display: block;
-        }
-    </style>
+    <link rel="stylesheet" href="./css/main.css" type="text/css" media="all" />
 </head>
 
 <body>
-<!--#include virtual="header.shtml" -->
-<TMPL_VAR NAME=MAIN_CONTENT>
+<div id='colLeft'>
+    <p>Left Column</p>
+</div>
+<div id='colRight'>
+    <p>Right Column</p>
+</div>
+<div id='colMiddle'>
+    <!--#include virtual="header.shtml" -->
+    <TMPL_VAR NAME=MAIN_CONTENT>
+</div>
+<div id='footer'>
+</div>
 </body>
 </html>
