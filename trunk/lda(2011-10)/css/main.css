@@ -12,6 +12,20 @@
             font-size: 80%;
         }
         
+        div#bannerText {
+            width: 400px;
+            outline: red 1px;
+            margin: 0 auto 20px auto; 
+        }
+        
+        div#bannerText h1, h2 {
+            margin: 0;
+            padding: 0;
+            font-family: Helvetica, Arial, sans-serif;
+            color:red;
+            text-align: center;
+        }
+        
         div.header
         {
             margin: 20px 190px 0 190px;
@@ -61,11 +75,11 @@
         }
         
         table.gallery td a {
-            margin-left: auto;
-            margin-right : auto;
             display: block;
         }
     
         table.gallery td a img {
             display: block;
+            margin-left: auto;
+            margin-right : auto;
         }
