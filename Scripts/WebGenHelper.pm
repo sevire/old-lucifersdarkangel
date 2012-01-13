@@ -49,9 +49,9 @@ sub get_text_file_list {
         while (scalar(@list) > 0) {
             my $file = shift(@list);
             my $fullpath = $dir_path . $config{ds} . $file;
-            # printf("Checking <%s>\n", $fullpath);
+            printf("Checking <%s>\n", $fullpath);
             if (!(-d $fullpath) && $file =~ $config{text_file_pattern}) {
-                # printf("Is valid file, adding to list\n");
+                printf("Is valid file, adding to list\n");
                 push(@text_file_list, $file);
             }
         }
@@ -126,7 +126,8 @@ sub generate_page {
         
         # Parse text with markdown script to apply formatting
         
-        $page_text = `Markdown.pl $text_file_name`;
+        say sprintf("About to parse text with Markdown for file <%s>", $text_file_name);
+        $page_text = `Markdown.pl "$text_file_name"`;
         
         # print $page_text;
         # print "\n";
