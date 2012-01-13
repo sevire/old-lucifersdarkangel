@@ -2,6 +2,7 @@
             margin: 0;
             background: black;
             color: white;
+            font-size: medium;
         }
         
         .headerLink
@@ -68,8 +69,21 @@
             text-align: center;
         }
         
-        div#pageText h1, h2, h3 {
+        div#pageText h1, div#pageText h2, div#pageText h3 {
+            font-family: sans-serif;
             color: #990000;
+        }
+        
+        div#pageText h1 {
+            font-size: 1.3em;
+        }
+        
+        div#pageText h2 {
+            font-size: 1.2em;
+        }
+        
+        div#pageText h3 {
+            font-size: 1.1em;
         }
         
         table.gallery {
