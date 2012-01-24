@@ -138,7 +138,7 @@ sub generate_page {
         open my $file, '>', $target_fullpath;
         my $template = HTML::Template->new(filename => $template_name);
         $template->param('MAIN_CONTENT' => $page_text);
-        $template->param('PAGE_TITLE' => $page_name);
+        $template->param('PAGE_TITLE' => page_name_spaces($page_name));
         if ($gallery_flag) {
             $template->param('IMAGE_CONTENT' => $image_html);
         }
@@ -374,6 +374,17 @@ sub calculate_page_lists {
     @page_list = (\@text_list, \@gallery_list);
     say "\nAll pages : @page_list\n";
     return @page_list;
+}
+
+sub page_name_spaces {
+    # Takes a page name from parsing the text filename and replaces underscores
+    # with spaces, for use in the page title and top level link bar.
+    
+    my $page_name = $_[0];
+    say "Page name before parsing is $page_name";
+    $page_name =~ s/_/ /g; # This should replace underscore with space
+    say "Parsed name is $page_name";
+    return $page_name;
 }
 
 1;
