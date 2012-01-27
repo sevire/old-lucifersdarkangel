@@ -3,6 +3,8 @@
             background: black;
             color: white;
             font-size: medium;
+            font-family: sans-serif;
+            line-height: 20px;
         }
         
         .headerLink
@@ -67,6 +69,7 @@
         
         div#pageText {
             text-align: center;
+            font-size: 80%;
         }
         
         div#pageText h1, div#pageText h2, div#pageText h3 {
