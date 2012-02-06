@@ -18,7 +18,7 @@ sub get_config_data {
         max_dimension => 130,
         table_column_width => 4,
     );
-    $data{text_rel_path} = $data{content_rel_path} . $data{ds} . "pages";
+    $data{text_rel_path} = $data{content_rel_path} . $data{ds} . $data{text_file_rel_path};
     $data{gallery_rel_path} = $data{content_rel_path} . $data{ds} . "galleries"; 
     return %data;
 }
