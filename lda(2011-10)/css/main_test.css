@@ -1,0 +1,111 @@
+        body {
+            margin: 0;
+            background: black;
+            color: white;
+            font-size: medium;
+            font-family: sans-serif;
+            line-height: 20px;
+        }
+        
+        .headerLink
+        {
+            color: #FFFFFF;
+            font-weight: bold;
+            font-family: "Times New Roman", serif;
+            font-size: 80%;
+        }
+        
+        div#bannerText {
+            width: 400px;
+            outline: red 1px;
+            margin: 0 auto 20px auto;
+        }
+        
+        div#bannerText h1, div#bannerText h2 {
+            margin: 0;
+            padding: 0;
+            font-family: sans-serif;
+            font-weight: normal;
+            color: #aa0000;
+            text-align: center;
+        }
+        
+        div.header
+        {
+            margin: 20px 190px 0 190px;
+            background-color: #330000;
+            text-align: center;
+        }
+        
+        div.header ul {
+            padding: 0;
+            margin: 20px 20px;
+        }
+        
+        div.header ul li {
+            list-style: none;
+            margin-left: 5px;
+            display: inline;
+        }
+
+        div#colLeft, div#colRight {
+            width: 150px;
+            height: 900px;
+        }
+        
+        div#colLeft {
+            /* background: url('../site_images/02l.jpg'); */
+            float: left;
+        }
+        
+        div#colRight {
+            /* background: url('../site_images/02r.jpg'); */
+            float: right;
+        }
+        
+        div #colMiddle {
+            background: blue;
+        }
+        
+        div#pageText {
+            text-align: center;
+            font-size: 80%;
+        }
+        
+        div#pageText h1, div#pageText h2, div#pageText h3 {
+            font-family: sans-serif;
+            color: #990000;
+        }
+        
+        div#pageText h1 {
+            font-size: 1.3em;
+        }
+        
+        div#pageText h2 {
+            font-size: 1.2em;
+        }
+        
+        div#pageText h3 {
+            font-size: 1.1em;
+        }
+        
+        table.gallery {
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        table.gallery td {
+            height: 150px;
+            width: 150px;
+            background: red;
+        }
+        
+        table.gallery td a {
+            display: block;
+        }
+    
+        table.gallery td a img {
+            display: block;
+            margin-left: auto;
+            margin-right : auto;
+        }
