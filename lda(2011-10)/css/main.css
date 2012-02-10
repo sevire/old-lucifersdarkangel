@@ -17,12 +17,11 @@
         
         div#bannerText {
             width: 400px;
-            outline: red 1px;
             margin: 0 auto 20px auto;
         }
         
         div#bannerText h1, div#bannerText h2 {
-            margin: 0;
+            margin: 0 0 5px 0;
             padding: 0;
             font-family: sans-serif;
             font-weight: normal;
@@ -30,9 +29,14 @@
             text-align: center;
         }
         
+        div#bannerText h2 {
+            font-size: 130%;
+        }
+        
         div.header
         {
-            margin: 20px 190px 0 190px;
+            margin: 20px auto 0 auto;
+            width: 80%;
             background-color: #330000;
             text-align: center;
         }
@@ -63,8 +67,8 @@
             float: right;
         }
         
-        div #colMiddle {
-            background: blue;
+        div#colMiddle {
+            margin: 0 160px 0 160px;
         }
         
         div#pageText {
@@ -74,7 +78,7 @@
         
         div#pageText h1, div#pageText h2, div#pageText h3 {
             font-family: sans-serif;
-            color: #990000;
+            color: #D20000  ;
         }
         
         div#pageText h1 {
@@ -87,6 +91,12 @@
         
         div#pageText h3 {
             font-size: 1.1em;
+        }
+        
+        div#pageText blockquote {
+            font-size: larger;
+            font-family: serif;
+            font-style: italic;
         }
         
         table.gallery {
