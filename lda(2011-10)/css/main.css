@@ -4,7 +4,6 @@
             color: white;
             font-size: medium;
             font-family: sans-serif;
-            line-height: 20px;
         }
         
         .headerLink
@@ -27,6 +26,10 @@
             font-weight: normal;
             color: #aa0000;
             text-align: center;
+        }
+        
+        div#bannerText h1 {
+            padding-top: 5px;
         }
         
         div#bannerText h2 {
@@ -74,6 +77,7 @@
         div#pageText {
             text-align: center;
             font-size: 80%;
+            line-height: 20px;
         }
         
         div#pageText h1, div#pageText h2, div#pageText h3 {
@@ -99,6 +103,15 @@
             font-style: italic;
         }
         
+        div#pageText a {
+            color: #D20000  ;
+        }
+        
+        div#pageText ul {
+            margin: 0 20%;
+            text-align: left;
+        }
+        
         table.gallery {
             margin-left: auto;
             margin-right: auto;
@@ -107,7 +120,7 @@
         table.gallery td {
             height: 150px;
             width: 150px;
-            background: red;
+            background: #222;
         }
         
         table.gallery td a {
