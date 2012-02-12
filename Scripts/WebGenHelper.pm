@@ -156,11 +156,11 @@ sub generate_thumbnails {
     
     my $thumbnail_foldername = $gallery_path . "/thumbnails";
     if (-e $thumbnail_foldername && -d $thumbnail_foldername) {
-        printf("Thumbnail directory <%s> already exists\n", $thumbnail_foldername);
-    } else {
-        printf("Creating thumbnail directory <%s> ...\n", $thumbnail_foldername);
-        `mkdir $thumbnail_foldername`;
-    }
+        printf("Deleting old thumbnail directory <%s>\n", $thumbnail_foldername);
+        `rm -rd $thumbnail_foldername`;
+    } 
+    printf("Creating thumbnail directory <%s> ...\n", $thumbnail_foldername);
+    `mkdir $thumbnail_foldername`;
     
     my @image_list = <$gallery_path/*.jpg>;
     foreach my $image (@image_list) {
@@ -169,7 +169,7 @@ sub generate_thumbnails {
             my $image_full_pathname = $thumbnail_foldername . $config{ds} . $base;
             # printf("Creating thumbnail for %s\n", $image);
             # printf("<%s>\n", `pwd`);
-            my $sips_string = "rm \"$image_full_pathname\";cp \"$image\" \"$thumbnail_foldername\";cd $thumbnail_foldername;sips -Z 130 \"$base\"";
+            my $sips_string = "cp \"$image\" \"$thumbnail_foldername\";cd $thumbnail_foldername;sips -Z 130 \"$base\"";
             # printf("About to execute sips command <%s>\n", $sips_string);
             `$sips_string`;
         }
@@ -275,6 +275,7 @@ sub create_table_of_images {
     $html = "";
     $output_lines = 0;
     foreach $image_data (@$image_array) {
+        $output_lines++;
         my ($name, $width, $height) = @$image_data;
         
         #say "Current name is $name";
@@ -290,20 +291,18 @@ sub create_table_of_images {
         $html_line = "<td>" . "<a " . "href='$image_path/$name'" . ">" . $tag_image . "</a>" . "</td>";
         # say "Current line is : $html_line";
         
-        if ($output_lines == 0) {
+        if ($output_lines == 1) {
             $html .= "<table class='gallery'>" . "\n";
         }
-        if ($output_lines % $table_column_width == 0) {
-            if ($output_lines != 0) {
+        if (($output_lines-1) % $table_column_width == 0) {
+            if ($output_lines != 1) {
                 $html .= "</tr>" . "\n";
             }
             $html .= "<tr>" . "\n";
         }
         $html .= $html_line . "\n";
-
-        $output_lines++;
     }
-    $html .= ("<td></td>" . "\n") x ($table_column_width - ($output_lines % $table_column_width));
+    $html .= ("<td></td>" . "\n") x ($table_column_width - ((($output_lines-1) % $table_column_width)+1));
     $html .= "</tr>\n</table>";
     $html;
 }

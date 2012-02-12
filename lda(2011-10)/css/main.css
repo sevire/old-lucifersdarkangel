@@ -61,15 +61,62 @@
         }
         
         div#colLeft {
-            background: url('../site_images/02l.jpg');
             float: left;
         }
         
         div#colRight {
-            background: url('../site_images/02r.jpg');
             float: right;
         }
         
+        /*
+         Set up default left and right images used if a new page is added but
+         the page specific css hasn't been added
+        */
+        
+        div#colLeft  {background: url('../site_images/02l.jpg')}
+        div#colRight {background: url('../site_images/02r.jpg')}
+        
+        /* Set up different left and right images for different pages */
+
+        body[id="Home"]             div#colLeft  {background: url('../site_images/01l.jpg')}
+        body[id="Home"]             div#colRight {background: url('../site_images/01r.jpg')}
+
+        body[id="Lady Zara"]        div#colLeft  {background: url('../site_images/02l.jpg')}
+        body[id="Lady Zara"]        div#colRight {background: url('../site_images/02r.jpg')}
+
+        body[id="Mistress Madox"]   div#colLeft  {background: url('../site_images/03l.jpg')}
+        body[id="Mistress Madox"]   div#colRight {background: url('../site_images/03r.jpg')}
+
+        body[id="Hunteress"]        div#colLeft  {background: url('../site_images/04l.jpg')}
+        body[id="Hunteress"]        div#colRight {background: url('../site_images/04r.jpg')}
+
+        body[id="My_Facilities"]    div#colLeft  {background: url('../site_images/05l.jpg')}
+        body[id="My_Facilities"]    div#colRight {background: url('../site_images/05r.jpg')}
+
+        body[id="Specialities"]     div#colLeft  {background: url('../site_images/06l.jpg')}
+        body[id="Specialities"]     div#colRight {background: url('../site_images/06r.jpg')}
+
+        body[id="Images"]           div#colLeft  {background: url('../site_images/07l.jpg')}
+        body[id="Images"]           div#colRight {background: url('../site_images/07r.jpg')}
+
+        body[id="More Images"]      div#colLeft  {background: url('../site_images/08l.jpg')}
+        body[id="More Images"]      div#colRight {background: url('../site_images/08r.jpg')}
+
+        body[id="Hall Of Shame"]    div#colLeft  {background: url('../site_images/09l.jpg')}
+        body[id="Hall Of Shame"]    div#colRight {background: url('../site_images/09r.jpg')}
+
+        body[id="Slave Musings"]    div#colLeft  {background: url('../site_images/01l.jpg')}
+        body[id="Slave Musings"]    div#colRight {background: url('../site_images/01r.jpg')}
+
+        body[id="Wishlist"]         div#colLeft  {background: url('../site_images/02l.jpg')}
+        body[id="Wishlist"]         div#colRight {background: url('../site_images/02r.jpg')}
+
+        body[id="Contact"]          div#colLeft  {background: url('../site_images/03l.jpg')}
+        body[id="Contact"]          div#colRight {background: url('../site_images/03r.jpg')}
+
+        body[id="Links"]            div#colLeft  {background: url('../site_images/04l.jpg')}
+        body[id="Links"]            div#colRight {background: url('../site_images/04r.jpg')}
+
         div#colMiddle {
             margin: 0 160px 0 160px;
         }
@@ -98,7 +145,7 @@
         }
         
         div#pageText blockquote {
-            font-size: larger;
+            /*font-size: larger;*/
             font-family: serif;
             font-style: italic;
         }
@@ -120,7 +167,8 @@
         table.gallery td {
             height: 150px;
             width: 150px;
-            background: #222;
+            /*background: #222;*/
+            background: black;
         }
         
         table.gallery td a {
