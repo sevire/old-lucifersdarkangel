@@ -17,6 +17,11 @@ sub get_config_data {
         table_column_width => 4,
         max_dimension => 130,
         table_column_width => 4,
+        ftp_host => "notnet.co.uk",
+        ftp_user => "panlucina",
+        ftp_password => "turatti",
+        ftp_live_rel_path => "web/lda",
+        ftp_test_rel_path => "web/lda(2011-10)",
     );
     $data{text_rel_path} = $data{content_rel_path} . $data{ds} . $data{text_file_rel_path};
     $data{gallery_rel_path} = $data{content_rel_path} . $data{ds} . "galleries"; 
