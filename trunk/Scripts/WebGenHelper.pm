@@ -8,6 +8,7 @@ use feature ':5.10';
 use Data::Dumper;
 use HTML::Template;
 use File::Basename;
+use Net::FTP;
 
 # require "Markdown.pl";
 
@@ -384,6 +385,29 @@ sub page_name_spaces {
     $page_name =~ s/_/ /g; # This should replace underscore with space
     say "Parsed name is $page_name";
     return $page_name;
+}
+
+sub ftp_connect {
+    my $ftp = Net::FTP->new($config{ftp_host}, Debug=>0)
+    or die "Cannot Connect";
+
+    say "Connected";
+        
+    $ftp->login($config{ftp_user}, $config{ftp_password})
+        or die "Cannot login ", $ftp->message;
+        
+    say "Logged On";
+    return $ftp;
+}
+
+sub ftp_transmit_page {
+    my $page_name = shift;
+    my $ftp = ftp_connect;
+    my $local_file = $page_name . ".shtml";
+    my $remote_file = $config{ftp_test_rel_path} . $config{ds} . $local_file;
+    say "Transmitting file $local_file to $remote_file";
+    $ftp->put($local_file, $remote_file)
+        or die "Put $remote_file failed", $ftp->message;
 }
 
 1;
