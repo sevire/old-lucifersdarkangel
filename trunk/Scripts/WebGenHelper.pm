@@ -1,16 +1,24 @@
 #!/usr/bin/perl -w
+################################################################################
+# This module provides all the functions which are used within the suite of
+# scripts related to generating and updating web pages for a given live website.
+################################################################################
 package WebGenHelper;
 use WebGenConfig;
+
+# Standard set of use statements
 
 use strict;
 use warnings;
 use feature ':5.10';
+
+# External packages
+
 use Data::Dumper;
 use HTML::Template;
 use File::Basename;
+use Text::Markdown;
 use Net::FTP;
-
-# require "Markdown.pl";
 
 my %config = WebGenConfig::get_config_data;
 my @text_file_list; # Stores file listing to avoid having to re-execute for each page
@@ -118,20 +126,17 @@ sub generate_page {
         my $holdTerminator = $/;
         my $page_text;
         my $unparsed_text;
-
-        #undef $/; # Removes line separator so all text read in one 'slurp'
         
-        #open($handle, $text_file_name) or die sprintf("Couldn't read text file <%s> for page <%s>", $text_file_name, $page_name);
-        #$unparsed_text = <$handle>;
-        #$/ = $holdTerminator;
+        undef $/; # Removes line separator so all text read in one 'slurp'
+        open($handle, $text_file_name) or die sprintf("Couldn't read text file <%s> for page <%s>", $text_file_name, $page_name);
+        $unparsed_text = <$handle>;
+        $/ = $holdTerminator;
         
-        # Parse text with markdown script to apply formatting
+        # Parse text with Markdown to apply formatting
         
         say sprintf("About to parse text with Markdown for file <%s>", $text_file_name);
-        $page_text = `Markdown.pl "$text_file_name"`;
-        
-        # print $page_text;
-        # print "\n";
+        my $m = Text::Markdown->new;
+        $page_text = $m->markdown($unparsed_text);
         
         # Pass template and text into Template to create complete page
         
