@@ -39,7 +39,7 @@ use WebGenHelper;
 
 my $root;
 my $page_name;
-my $debug = 1;
+my $debug = 0;
 my %config;
 
 sub process_command_line {
@@ -53,9 +53,11 @@ sub process_command_line {
     $page_name = shift(@ARGV);
     if (!(defined $page_name)) {
         printf "Page name not specified\n";
-    } elsif ($debug) {
-        printf("Page name is : <%s>\n", $page_name);
+    } else {
         $success = 1;
+    }
+    if ($debug) {
+        printf("Page name is : <%s>\n", $page_name);
     }
     
     do 'WebGenConfig.pl';

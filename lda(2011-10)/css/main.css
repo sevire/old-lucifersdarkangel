@@ -3,7 +3,7 @@
             background: black;
             color: white;
             font-size: medium;
-            font-family: sans-serif;
+            font-family: Verdana, Arial, Helvetica, sans-serif;
         }
         
         .headerLink
@@ -118,12 +118,12 @@
         body[id="Links"]            div#colRight {background: url('../site_images/04r.jpg')}
 
         div#colMiddle {
-            margin: 0 160px 0 160px;
+            margin: 0 180px 0 180px;
         }
         
         div#pageText {
             text-align: center;
-            font-size: 80%;
+            font-size: 75%;
             line-height: 20px;
         }
         
@@ -146,6 +146,7 @@
         
         div#pageText blockquote {
             /*font-size: larger;*/
+            font-size: 120%;
             font-family: serif;
             font-style: italic;
         }
@@ -176,6 +177,7 @@
         }
     
         table.gallery td a img {
+            border: none;
             display: block;
             margin-left: auto;
             margin-right : auto;

@@ -1,27 +1,6 @@
 #!/usr/bin/perl -w
 ################################################################################
-# This script creates a particular page given its name.
-#
-# The script will work out whether the page is valid (i.e. there is text
-# for it), whether it is a simple text page or a gallery page, and then create
-# the following:
-#
-# - shtml file for the page, including a table of thumbnails if a gallery
-# - thumbnail directory under the image folder if the page is a gallery
-# - thumbnails for the images if the file is a gallery
-#
-# Usage:
-#
-# update_page [-rootpath <path>] [pagename]
-#
-# [pagename] : The name of the page to be created.  Used to derive the file
-#              name for text pages and the name of the folder where images are
-#              stored for gallery pages.
-#
-# -rootpath <path> : full or relative pathname where the root of the website is.
-#                    This is where shtml files will be placed and where the
-#                    content folder will be expected for text files and gallery
-#                    images.
+# This script sends a page to the live server via ftp.
 ################################################################################
 package WebsiteGen;
 

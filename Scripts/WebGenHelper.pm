@@ -6,6 +6,8 @@
 package WebGenHelper;
 use WebGenConfig;
 
+my $debug=1;
+
 # Standard set of use statements
 
 use strict;
@@ -58,13 +60,13 @@ sub get_text_file_list {
         while (scalar(@list) > 0) {
             my $file = shift(@list);
             my $fullpath = $dir_path . $config{ds} . $file;
-            printf("Checking <%s>\n", $fullpath);
+            debug("Checking <%s>\n", $fullpath);
             if (!(-d $fullpath) && $file =~ $config{text_file_pattern}) {
-                printf("Is valid file, adding to list\n");
+                debug("Is valid file, adding to list\n");
                 push(@text_file_list, $file);
             }
         }
-        # printf("Num files is <%d>, list of files follows...\n", scalar(@text_file_list));
+        # debug("Num files is <%d>, list of files follows...\n", scalar(@text_file_list));
         # say Dumper(@text_file_list);
     }
     return @ok_flag;
@@ -72,7 +74,7 @@ sub get_text_file_list {
 
 sub get_textfile_for_page {
     my $page = shift;
-    # printf("Finding text file for page <%s>\n", $page);
+    # debug("Finding text file for page <%s>\n", $page);
     if (get_text_file_list) {
         foreach my $file (@text_file_list) {
             if ($file =~ $config{text_file_pattern} && $2 eq $page) {
@@ -95,7 +97,7 @@ sub generate_page {
     } else {
         if (WebGenHelper::is_gallery($page_name)) {
             $gallery_flag = 1;
-            say sprintf("<%s> is a gallery\n", $page_name);
+            debug("<%s> is a gallery\n", $page_name);
 
             # Creating a gallery so need to generate thumbnails / gallery HTML
             my $gallery_path = $config{root} . $config{ds} . $config{content_rel_path} .
@@ -107,7 +109,7 @@ sub generate_page {
             my @image_data = get_image_data($thumbnail_foldername);
             $image_html = create_table_of_images(\@image_data, $config{max_dimension}, $gallery_path, $config{table_column_width});
         } else {
-            say sprintf("<%s> is a text page\n", $page_name);
+            debug("<%s> is a text page\n", $page_name);
         }
 
         # Make up page from text content and template
@@ -134,13 +136,13 @@ sub generate_page {
         
         # Parse text with Markdown to apply formatting
         
-        say sprintf("About to parse text with Markdown for file <%s>", $text_file_name);
+        debug("About to parse text with Markdown for file <%s>\n", $text_file_name);
         my $m = Text::Markdown->new;
         $page_text = $m->markdown($unparsed_text);
         
         # Pass template and text into Template to create complete page
         
-        printf("Writing page <%s> to file <%s>\n", $page_name, $target_fullpath);
+        debug("Writing page <%s> to file <%s>\n", $page_name, $target_fullpath);
         open my $file, '>', $target_fullpath;
         my $template = HTML::Template->new(filename => $template_name);
         $template->param('MAIN_CONTENT' => $page_text);
@@ -148,7 +150,7 @@ sub generate_page {
         if ($gallery_flag) {
             $template->param('IMAGE_CONTENT' => $image_html);
         }
-        # printf("Generated Page contents...\n\n\n");
+        # debug("Generated Page contents...\n\n\n");
         # say($template->output);
         print $file $template->output;
         close $file;
@@ -162,21 +164,21 @@ sub generate_thumbnails {
     
     my $thumbnail_foldername = $gallery_path . "/thumbnails";
     if (-e $thumbnail_foldername && -d $thumbnail_foldername) {
-        printf("Deleting old thumbnail directory <%s>\n", $thumbnail_foldername);
+        debug("Deleting old thumbnail directory <%s>\n", $thumbnail_foldername);
         `rm -rd $thumbnail_foldername`;
     } 
-    printf("Creating thumbnail directory <%s> ...\n", $thumbnail_foldername);
+    debug("Creating thumbnail directory <%s> ...\n", $thumbnail_foldername);
     `mkdir $thumbnail_foldername`;
     
-    my @image_list = <$gallery_path/*.jpg>;
+    my @image_list = (<$gallery_path/*.jpg>, <$gallery_path/*.JPG>);
     foreach my $image (@image_list) {
         if (-f $image) {
             my $base = basename($image);
             my $image_full_pathname = $thumbnail_foldername . $config{ds} . $base;
-            # printf("Creating thumbnail for %s\n", $image);
-            # printf("<%s>\n", `pwd`);
+            debug("Creating thumbnail for %s\n", $image);
+            # debug("<%s>\n", `pwd`);
             my $sips_string = "cp \"$image\" \"$thumbnail_foldername\";cd $thumbnail_foldername;sips -Z 130 \"$base\"";
-            # printf("About to execute sips command <%s>\n", $sips_string);
+            debug("About to execute sips command <%s>\n", $sips_string);
             `$sips_string`;
         }
     }
@@ -187,7 +189,7 @@ sub page_exists {
     
     my $page_name = shift;
     
-    say sprintf("Checking existence of <%s>...\n", $page_name);
+    debug("Checking existence of <%s>...\n", $page_name);
     
     if (!get_text_file_list) {
         return 0;
@@ -349,7 +351,7 @@ sub calculate_page_lists {
     my @gallery_list;
     my @text_list;
     
-    say "Reading directory $dir_path";
+    debug( "Reading directory $dir_path\n");
     opendir($handle, $dir_path);
     @file_list =  readdir($handle);
     # say "Num files is: " . scalar(@file_list);
@@ -359,8 +361,7 @@ sub calculate_page_lists {
         if (-d $file_path) {
             # say "$file_path is dir, ignoring";
         } elsif (-f $file_path) {
-            say "\n";
-            say "$file_path is file, checking";
+            debug("$file_path is file, checking\n");
             if ($file =~ $config{text_file_pattern}) {
                 $gallery_candidate_path = $config{root} . "/" . $config{gallery_rel_path} . "/" . $2;
                 # say "Testing for existence of $gallery_candidate_path";
@@ -386,9 +387,9 @@ sub page_name_spaces {
     # with spaces, for use in the page title and top level link bar.
     
     my $page_name = $_[0];
-    say "Page name before parsing is $page_name";
+    debug("Page name before parsing is $page_name\n");
     $page_name =~ s/_/ /g; # This should replace underscore with space
-    say "Parsed name is $page_name";
+    debug("Parsed name is $page_name\n");
     return $page_name;
 }
 
@@ -413,6 +414,12 @@ sub ftp_transmit_page {
     say "Transmitting file $local_file to $remote_file";
     $ftp->put($local_file, $remote_file)
         or die "Put $remote_file failed", $ftp->message;
+}
+
+sub debug {
+    if ($debug) {
+        printf(@_);
+    }
 }
 
 1;
