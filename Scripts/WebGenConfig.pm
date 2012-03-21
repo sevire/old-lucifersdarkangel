@@ -15,7 +15,7 @@ sub get_config_data {
         gallery_folder_rel_path => "galleries",
         text_file_pattern => "PAGE-(\\d{2})-(.+).txt", # Match file with format PAGE-nn-Pagename
         table_column_width => 4,
-        max_dimension => 130,
+        max_dimension => 100,
         table_column_width => 4,
         ftp_host => "notnet.co.uk",
         ftp_user => "panlucina",

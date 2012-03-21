@@ -256,7 +256,14 @@ sub get_image_data {
         }
     }
     # say "length of image_array is " . scalar(@image_array);
+    print_image_array(\@image_array);
+    @image_array = sort { $a->[0] cmp $b->[0]} @image_array;
+    print_image_array(\@image_array);
     return @image_array;
+}
+
+sub print_image_array {
+    say Dumper(@{$_[0]});
 }
 
 sub create_table_of_images {
