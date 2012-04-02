@@ -257,7 +257,7 @@ sub get_image_data {
     }
     # say "length of image_array is " . scalar(@image_array);
     print_image_array(\@image_array);
-    @image_array = sort { $a->[0] cmp $b->[0]} @image_array;
+    @image_array = sort {$a->[0] cmp $b->[0]} @image_array;
     print_image_array(\@image_array);
     return @image_array;
 }
