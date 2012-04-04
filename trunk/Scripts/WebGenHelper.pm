@@ -23,7 +23,7 @@ use Text::Markdown;
 use Net::FTP;
 
 my %config = WebGenConfig::get_config_data;
-my @text_file_list; # Stores file listing to avoid having to re-execute for each page
+our @text_file_list; # Stores file listing to avoid having to re-execute for each page
 
 sub is_gallery {
     # Works out whether there is a sub-folder for a gallery with the same
