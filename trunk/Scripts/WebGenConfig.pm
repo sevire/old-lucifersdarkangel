@@ -14,6 +14,7 @@ sub get_config_data {
         text_template_filename => "text_template.html",
         gallery_folder_rel_path => "galleries",
         text_file_pattern => "PAGE-(\\d{2})-(.+).txt", # Match file with format PAGE-nn-Pagename
+        home_page => 'Home', # For this page use index.shtml as output file name
         table_column_width => 4,
         max_dimension => 100,
         table_column_width => 4,
