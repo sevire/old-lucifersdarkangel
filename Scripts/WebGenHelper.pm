@@ -6,16 +6,17 @@
 package WebGenHelper;
 use WebGenConfig;
 
-my $debug=1;
+my $debug=0;
 
 # Standard set of use statements
 
 use strict;
 use warnings;
-use feature ':5.10';
+use feature ':5.12';
 
 # External packages
 
+#use Log::Log4perl;
 use Data::Dumper;
 use HTML::Template;
 use File::Basename;
@@ -120,6 +121,9 @@ sub generate_page {
             $config{ds} . $template_file;
         my $text_file_name = $config{root} . $config{ds} . $config{content_rel_path} . $config{ds} . $config{text_file_rel_path} .
             $config{ds} . WebGenHelper::get_textfile_for_page($page_name);
+        if ($page_name eq $config{home_page}) {
+            $page_name = 'index';
+        }
         my $target_fullpath = $config{target_root} . $config{ds} . $page_name . ".shtml";
         
         # Read in contents of text file
@@ -164,8 +168,8 @@ sub generate_thumbnails {
     
     my $thumbnail_foldername = $gallery_path . "/thumbnails";
     if (-e $thumbnail_foldername && -d $thumbnail_foldername) {
-        debug("Deleting old thumbnail directory <%s>\n", $thumbnail_foldername);
-        `rm -rd $thumbnail_foldername`;
+        debug("Deleting all files from existing thumbnails folder <%s>\n", $thumbnail_foldername);
+        `rm $thumbnail_foldername/*`;
     } 
     debug("Creating thumbnail directory <%s> ...\n", $thumbnail_foldername);
     `mkdir $thumbnail_foldername`;
