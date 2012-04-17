@@ -3,6 +3,7 @@
     <h2>Princess Lucina Of Manchester</h2>
 </div>
 <div class='header'>
+    <!--#include virtual="mistresses.shtml" -->
     <!--#include virtual="topLinkBar.shtml" -->
     <ul><li><a class='headerLink' href="http://groups.yahoo.com/group/lucifersdarkangel/">YAHOO!&nbsp;GROUP</a></li></ul>
 </div>
