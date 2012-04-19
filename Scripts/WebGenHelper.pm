@@ -6,7 +6,7 @@
 package WebGenHelper;
 use WebGenConfig;
 
-my $debug=0;
+my $debug=1;
 
 # Standard set of use statements
 
@@ -25,6 +25,7 @@ use Net::FTP;
 
 my %config = WebGenConfig::get_config_data;
 our @text_file_list; # Stores file listing to avoid having to re-execute for each page
+our @text_file_data; # Stores file data to avoid having to re-parse many times.
 
 sub is_gallery {
     # Works out whether there is a sub-folder for a gallery with the same
@@ -43,7 +44,8 @@ sub is_gallery {
 }
 
 sub get_text_file_list {
-    my @ok_flag = 1;
+    my $ok_flag = 1;
+    
     if (!@text_file_list) { # Tests size so implicitly whether dir listing has been done
         my $dir_path = $config{root} . $config{ds} . $config{content_rel_path} . $config{ds} . $config{text_file_rel_path};
         # say "Reading directory $dir_path";
@@ -51,7 +53,7 @@ sub get_text_file_list {
         if (opendir(my $handle, $dir_path)) {
             @list =  readdir($handle);
         } else {
-            @ok_flag = 0;
+            $ok_flag = 0;
         }
         # printf("Files from read dir...\n");
         # say Dumper(@list);
@@ -70,7 +72,43 @@ sub get_text_file_list {
         # debug("Num files is <%d>, list of files follows...\n", scalar(@text_file_list));
         # say Dumper(@text_file_list);
     }
-    return @ok_flag;
+    return $ok_flag;
+}
+
+sub display_text_file_entry {
+    my $entry = shift;
+    say Dumper($entry);
+    printf("Page number <%s>, Page name <%s>, Filename <%s>\n", @$entry);
+}
+
+sub display_text_file_data {
+    if (@text_file_data > 0) {
+        foreach my $entry (@text_file_data) {
+            display_text_file_entry($entry);
+        }
+    }
+}
+
+sub parse_text_file_list {
+    my ($file, $page_num, $page_name);
+    
+    if (get_text_file_list) {
+        foreach $file (@text_file_list) {
+            # Already know that files fit pattern but need to extract fields so re-match
+            if ($file =~ $config{text_file_pattern}) {
+                $page_num = $1;
+                $page_name = $2;
+                my @entry = ($file, $page_num, $page_name);
+                push(@text_file_data, \@entry);
+            } else {
+                return 0;
+            }
+        }
+    } else {
+        return 0;
+    }
+    display_text_file_data;
+    return 1;
 }
 
 sub get_textfile_for_page {
@@ -198,6 +236,8 @@ sub page_exists {
     if (!get_text_file_list) {
         return 0;
     } else {
+        debug("About to parse text file list...\n");
+        parse_text_file_list;
         foreach my $file (@text_file_list) {
             if ($file =~ $config{text_file_pattern} && $2 eq $page_name) {
                 return 1; # Matches and right page name so return true;
