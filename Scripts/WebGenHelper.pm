@@ -77,7 +77,7 @@ sub get_text_file_list {
 
 sub display_text_file_entry {
     my $entry = shift;
-    say Dumper($entry);
+    #say Dumper($entry);
     printf("Page number <%s>, Page name <%s>, Filename <%s>\n", @$entry);
 }
 
@@ -386,7 +386,7 @@ sub get_subdir_list {
     @dir_list;
 }
 
-sub calculate_page_lists {
+sub calculate_page_list {
     # Gets list of page text files and then work out which pages are galleries
     # Returns an array with two sub-arrays, one of pages and one of galleries
     # each sorted by page number
@@ -399,8 +399,8 @@ sub calculate_page_lists {
     my $gallery_candidate_path;
     my $file;
     my $file_path;
-    my @gallery_list;
-    my @text_list;
+    #my @text_list;
+    my $page_type;
     
     debug( "Reading directory $dir_path\n");
     opendir($handle, $dir_path);
@@ -418,17 +418,17 @@ sub calculate_page_lists {
                 # say "Testing for existence of $gallery_candidate_path";
                 if (-e $gallery_candidate_path) {
                     say "$file is gallery page for website";
-                    push(@gallery_list, [$2, $1]);
+                    $page_type = 'gallery';
                 } else {
                     say "$file is text page for website";
-                    push(@text_list, [$2, $1]);
+                    $page_type = 'page';
                 }
+                push(@page_list, [$2, $1, $page_type]);
             }
         } else {
             say "$file_path is neither file nor directory (!!!!)";
         }
     }
-    @page_list = (\@text_list, \@gallery_list);
     say "\nAll pages : @page_list\n";
     return @page_list;
 }
