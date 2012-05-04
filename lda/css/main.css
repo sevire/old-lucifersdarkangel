@@ -15,21 +15,27 @@
         }
         
         div#bannerText {
-            width: 400px;
+            width: 500px;
             margin: 0 auto 20px auto;
         }
         
         div#bannerText h1, div#bannerText h2 {
             margin: 0 0 5px 0;
             padding: 0;
-            font-family: sans-serif;
+            font-family: cursive;
             font-weight: normal;
             color: #aa0000;
             text-align: center;
+            line-height: 150%;
+        }
+        
+        span.first {
+            font-size: 150%;
         }
         
         div#bannerText h1 {
             padding-top: 5px;
+            font-size: 300%;
         }
         
         div#bannerText h2 {
