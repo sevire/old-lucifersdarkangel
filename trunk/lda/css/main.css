@@ -133,6 +133,10 @@
             line-height: 20px;
         }
         
+        div#pageText img.imageTop {
+            width: 200px;
+        }
+        
         div#pageText h1, div#pageText h2, div#pageText h3 {
             font-family: sans-serif;
             color: #D20000  ;
