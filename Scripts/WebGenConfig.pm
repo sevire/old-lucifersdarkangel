@@ -1,5 +1,6 @@
 # Config values for WebGenHelper and associated scripts
 
+use lib '/usr/local/bin/my_scripts';
 package WebGenConfig;
 
 sub get_config_data {

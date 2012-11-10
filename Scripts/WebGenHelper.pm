@@ -4,6 +4,7 @@
 # scripts related to generating and updating web pages for a given live website.
 ################################################################################
 package WebGenHelper;
+use lib '/usr/local/bin/my_scripts';
 use WebGenConfig;
 
 my $debug=1;
@@ -15,6 +16,7 @@ use warnings;
 use feature ':5.12';
 
 # External packages
+
 
 #use Log::Log4perl;
 use Data::Dumper;

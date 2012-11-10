@@ -25,6 +25,7 @@
 ################################################################################
 package WebsiteGen;
 
+use lib '/usr/local/bin/my_scripts';
 use Getopt::Long;
 use strict;
 use warnings;
